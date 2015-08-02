@@ -1,0 +1,17 @@
+{
+  "name": "webvideoconvert",
+  "version": "0.0.1",
+  "description": "A ffmpeg dependant video converter, tailored for use on the web",
+  "preferGlobal": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robin Lambell robin@madlandproject.com",
+  "license": "ISC",
+  "bin": {
+    "webvideoconvert": "src/index.js"
+  },
+  "dependencies": {
+    "minimist": "^1.1.2"
+  }
+}
