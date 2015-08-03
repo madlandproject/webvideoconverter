@@ -1,5 +1,5 @@
-var fs = require('fs');
-
+var fs          = require('fs');
+var stripAnsi   = require('strip-ansi');
 
 var logger = {
 
@@ -14,16 +14,14 @@ var logger = {
 
     _output : function(message, always) {
 
-        var messageLine = message+"\n";
-
         // console
         if ( this.versbose || always ) {
-            console.log(messageLine);
+            console.log(message);
         }
 
         // file log
         if (this.logFile) {
-            fs.appendFileSync(this.logFile, messageLine);
+            fs.appendFileSync(this.logFile, stripAnsi(message+"\n") );
         }
 
     },

@@ -44,8 +44,9 @@ var verbose = opts.verbose;
 
 if (fileLog) {
     log.enable({logFile : logPath, verbose: verbose});
+} else {
+    log.enable({verbose: verbose});
 }
-
 
 // find the manifest file, either with options or automatically
 var manifestPath = './videomanifest.json';
@@ -77,9 +78,13 @@ try {
 }
 
 // Output banner
-var banner  = ('Web Video Converter v' + pkg.version + "\n").underline.green;
-
+var banner  = ('Web Video Converter v' + pkg.version).underline.green;
 log.log( banner, true);
+
+// Record startup time
+var startupTime = new Date;
+
+log.log( 'Start time :'+startupTime.toString() );
 
 
 // TODO build a list of tasks
