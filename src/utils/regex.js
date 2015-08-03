@@ -2,7 +2,6 @@ var patterns = {
     ffVersion : /^ff(?:probe|mpeg) version [a-z]?((?:[0-9]|\.)*)/ig
 };
 
-
 module.exports = {
     patterns : patterns,
 

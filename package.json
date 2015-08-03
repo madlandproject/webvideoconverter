@@ -2,16 +2,22 @@
   "name": "webvideoconvert",
   "version": "0.0.1",
   "description": "A ffmpeg dependant video converter, tailored for use on the web",
+  "repository": "https://github.com/madlandproject/webvideoconverter",
   "preferGlobal": true,
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall" : "src/postinstall/verifyfftools.js"
   },
   "author": "Robin Lambell robin@madlandproject.com",
   "license": "ISC",
   "bin": {
-    "webvideoconvert": "src/index.js"
+    "webvideoconvert": "src/cli.js"
   },
   "dependencies": {
-    "minimist": "^1.1.2"
+    "colors": "^1.1.2",
+    "lodash": "^3.10.0",
+    "minimist": "^1.1.2",
+    "strip-ansi": "^3.0.0"
   }
 }
