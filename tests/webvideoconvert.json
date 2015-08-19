@@ -1,0 +1,22 @@
+{
+  "input" : "source/*.mov",
+
+  "output" : [
+    {
+      "dest" : "mp4/*.mp4",
+      "audio" : {
+        "codec" : "aac",
+        "bitrate" : 128
+      },
+      "video" : {
+        "codec" : "h264",
+        "size" : "1280x720",
+      },
+      "extraParams" : [
+        "-y"
+      ]
+    }
+
+  ]
+
+}

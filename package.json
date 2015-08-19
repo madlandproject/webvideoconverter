@@ -6,8 +6,8 @@
   "preferGlobal": true,
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-    "postinstall" : "src/postinstall/verifyfftools.js"
+    "test": "cd tests; ./test-module.js",
+    "postinstall": "src/scripts/postinstall.js"
   },
   "author": "Robin Lambell robin@madlandproject.com",
   "license": "ISC",
@@ -19,5 +19,9 @@
     "lodash": "^3.10.0",
     "minimist": "^1.1.2",
     "strip-ansi": "^3.0.0"
+  },
+  "devDependencies": {
+    "glob": "^5.0.14",
+    "q": "^1.4.1"
   }
 }

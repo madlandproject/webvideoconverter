@@ -9,6 +9,8 @@ What will the API look like?
 ## Sensible Defaults ##
 use codec names, not lib names, attempt to use the best implementation for each codec
 
+## Future features ##
+
 
 ## Example manifest ##
 
@@ -42,3 +44,9 @@ Use of a manifest file : webvideoconvert.json
     "saveLog" : (true | filename)
 }
 ```
+
+## Basic application flow ##
+
+- get list of files
+- analyse each file and handle errors with the streams
+- 

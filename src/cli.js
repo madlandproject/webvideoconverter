@@ -21,7 +21,7 @@ var minimist        = require('minimist');
 
 // -> Internal modules
 // general
-var webvideoconvert = require('./index')
+var webvideoconvert = require('./index');
 var log             = require('./utils/logger');
 
 
@@ -34,8 +34,6 @@ var log             = require('./utils/logger');
 
 // load command linte options into object
 var opts = minimist( process.argv );
-
-//console.log(opts);
 
 // Determine fileLog policy
 var fileLog = (opts.l || opts['save-log']);
@@ -75,8 +73,5 @@ var startupTime = new Date;
 
 log.log( 'Start time :'+startupTime.toString() );
 
-
-// TODO build a list of tasks
-
-
-// TODO execute tasks
+// send manifest and options to instance of encoder
+var encoder = webvideoconvert( fs.readFileSync(manifestPath), { } );
